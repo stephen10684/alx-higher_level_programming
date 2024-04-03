@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-def print_items_safely(my_list=[], x=0):
-    items_printed = 0
-    for i in range(x):
-        try:
-            print("[{}]".format(my_list[i]), end=", ")
-            items_printed += 1
-        except IndexError:
-            continue
-    print("\n Total items printed:", items_printed)
-    return items_printed
+def safe_print_list(my_list=[], x=0):
+    num = 0
+    try:
+        for item in range(x):
+            print("{}".format(my_list[item]), end='')
+            num += 1
+    except IndexError:
+        pass
+    print()
+    return num
