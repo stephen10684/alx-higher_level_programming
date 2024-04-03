@@ -8,12 +8,12 @@ private instance attribute: size
 
 class Square:
     """
-    a class with attribute size=0.
+    Defines a class with attribute size=0.
     checks for certain conditions.
     """
     def __init__(self, size=0):
         if not isinstance(size, int):
-            raise TypeError("size is an integer")
+            raise TypeError("size must be an integer")
         if size < 0:
-            raise ValueError("size is  >= 0")
+            raise ValueError("size must be >= 0")
         self.__size = size
